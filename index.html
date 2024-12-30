@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>期末考试砍分小游戏</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+<body>
+    <div class="particles"></div>
+    <div class="container">
+        <div class="score">100</div>
+        <div class="difficulty">当前难度：地狱级</div>
+        <button class="knife-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" class="knife">
+                <path d="M20.96 17.84l-2.12-2.12-2.83 2.83 2.12 2.12a1.5 1.5 0 0 0 2.12 0l.71-.71a1.5 1.5 0 0 0 0-2.12zM3.71 2.29a1 1 0 0 0-1.42 1.42l18 18a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="message"></div>
+
+    <div class="overlay" id="startOverlay">
+        <div class="modal">
+            <h2>期末考试砍分小游戏</h2>
+            <p>🎮 游戏规则：</p>
+            <p>1. 点击中间的刀降低考试难度</p>
+            <p>2. 躲避飞来的科目名称（点到会增加难度）</p>
+            <p>3. 游戏时间12秒，尽可能降低难度！</p>
+            <p>4. 难度每0.05秒自动增加1分</p>
+            <button class="start-btn">开始游戏</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="endOverlay" style="display: none;">
+        <div class="modal">
+            <h2>游戏结束！</h2>
+            <p>最终难度：<span id="finalScore">0</span></p>
+            <p>最终等级：<span id="finalDifficulty">简单</span></p>
+            <button class="restart-btn">再来一次</button>
+        </div>
+    </div>
+
+    <div class="timer">12.0</div>
+
+    <script src="js/constants.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

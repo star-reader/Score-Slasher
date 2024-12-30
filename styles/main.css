@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    transition: background 0.3s;
+    font-family: "Microsoft YaHei", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+}
+
+.score {
+    font-size: 72px;
+    margin: 20px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.score::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    animation: pulse 2s infinite;
+}
+
+.difficulty {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.knife-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    outline: none;
+    position: relative;
+}
+
+.knife {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.knife-btn:active {
+    transform: scale(0.95);
+}
+
+.message {
+    position: fixed;
+    top: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+
+.timer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 100;
+}
+
+.bullet {
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+    pointer-events: all;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+    z-index: 50;
+    transition: transform 0.3s;
+    font-weight: bold;
+}
+
+.bullet:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 15px #fff;
+} 
